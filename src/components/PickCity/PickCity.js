@@ -5,13 +5,11 @@ import { useState } from 'react';
 
 const PickCity = ({action}) => {
   const [city, setCity] = useState('');
-    console.log('city in PickCity= ',city);
-    console.log('action in PickCity=', action);
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('fired', action)
-    action(city);
+    action(city)
+    setCity('')
   }
 
   return (
